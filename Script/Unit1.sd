@@ -1,0 +1,104 @@
+﻿procedure Test1;
+begin
+  //Runs the "TestEnvironment_TD32" tested application.
+  TestedApps.TestEnvironment_TD32.Run(1, true);
+  //Clicks the 'FMain' object.
+  Aliases.TestEnvironment_TD32_.FMain.Click(437, 14);
+  //Drags the 'FMain' object.
+  Aliases.TestEnvironment_TD32_.FMain.Drag(671, 15, 33, 80);
+  //Maximizes the 'FMain' window.
+  Aliases.TestEnvironment_TD32_.FMain.Maximize;
+  //Clicks the 'dxRibbonTab1|[0]|Форма редакторов' item of the 'dxRibbon' bar.
+  Aliases.TestEnvironment_TD32_.FMain.dxRibbon.ClickItemXY('dxRibbonTab1|[0]|Форма редакторов', 67, 12);
+  //Clicks the 'TcxCustomInnerMemo' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.mTest.mTestEdit.TcxCustomInnerMemo.Click(33, 7);
+  //Enters '"~![ReleaseLast][ReleaseLast]![ReleaseLast][BS]Это многострочный текст. Привет, как дела~![ReleaseLast][ReleaseLast]?~![ReleaseLast][ReleaseLast] 123456[Enter]Разные слова.' in the 'TcxCustomInnerMemo' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.mTest.mTestEdit.TcxCustomInnerMemo.Keys('"~![ReleaseLast][ReleaseLast]![ReleaseLast][BS]Это многострочный текст. Привет, как дела~![ReleaseLast][ReleaseLast]?~![ReleaseLast][ReleaseLast] 123456[Enter]Разные слова.');
+  //Clicks the 'TcxButton' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel7 object equals 'Это многострочный текст. Привет, как дела? 123456
+  //Разные слова.'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel7, 'WndCaption', cmpEqual, 'Это многострочный текст. Привет, как дела? 123456'#13#10'Разные слова.');
+  //Clicks the 'TcxCustomInnerTextEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.edTest.edTestEdit.TcxCustomInnerTextEdit.Click(12, 5);
+  //Enters the text '1234567890' in the 'TcxCustomInnerTextEdit' text editor.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.edTest.edTestEdit.TcxCustomInnerTextEdit.SetText('1234567890');
+  //Clicks the 'TcxButton2' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton2.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel8 object equals '1234567890'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel8, 'WndCaption', cmpEqual, '1234567890');
+  //Clicks the 'TcxButton3' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton3.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel5 object equals 'False'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel5, 'WndCaption', cmpEqual, 'False');
+  //Sets the state of the 'cbTestEdit' check box to cbChecked.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.cbTest.cbTestEdit.ClickButton(cbChecked);
+  //Clicks the 'TcxButton3' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton3.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel5 object equals 'True'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel5, 'WndCaption', cmpEqual, 'True');
+  //Clicks the 'TcxCustomInnerTextEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.ceTest.ceTestEdit.TcxCustomInnerTextEdit.Click(108, 12);
+  //Enters the text '4567567678' in the 'TcxCustomInnerTextEdit' text editor.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.ceTest.ceTestEdit.TcxCustomInnerTextEdit.SetText('4567567678');
+  //Clicks the 'TcxButton4' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton4.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel9 object equals '4567567678'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel9, 'WndCaption', cmpEqual, '4567567678');
+  //Clicks the 'ccbTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.ccbTest.ccbTestEdit.Click(281, 11);
+  //Clicks the 'TcxCustomCheckComboBoxListBox' object.
+  Aliases.TestEnvironment_TD32_.TcxCheckComboBoxPopupWindow.TcxEditListBoxContainer.TcxCustomCheckComboBoxListBox.Click(202, 23);
+  //Clicks the 'ccbTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.ccbTest.ccbTestEdit.Click(283, 14);
+  //Clicks the 'TcxButton5' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton5.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel2 object equals '2'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel2, 'WndCaption', cmpEqual, '2');
+  //Clicks the 'TcxCustomInnerTextEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.seTest.seTestEdit.TcxCustomInnerTextEdit.Click(214, 7);
+  //Enters the text '12' in the 'TcxCustomInnerTextEdit' text editor.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.seTest.seTestEdit.TcxCustomInnerTextEdit.SetText('12');
+  //Clicks the 'seTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.seTest.seTestEdit.Click(284, 6);
+  //Clicks the 'seTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.seTest.seTestEdit.Click(284, 6);
+  //Clicks the 'TcxButton6' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton6.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel10 object equals '2'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel10, 'WndCaption', cmpEqual, '2');
+  //Clicks the 'deTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.deTest.deTestEdit.Click(278, 10);
+  //Clicks the 'TcxPopupCalendar' object.
+  Aliases.TestEnvironment_TD32_.TcxDateEditPopupWindow.TcxPopupCalendar.Click(146, 112);
+  //Clicks the 'TcxButton8' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton8.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel11 object equals '13.07.2019'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel11, 'WndCaption', cmpEqual, '13.07.2019');
+  //Clicks the 'peTestProgress' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.peTest.peTestProgress.Click(148, 8);
+  //Double-clicks the 'peTestUp' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.peTest.peTestUp.DblClick(13, 8);
+  //Clicks the 'peTestUp' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.peTest.peTestUp.ClickButton;
+  //Clicks the 'TcxButton7' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton7.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel12 object equals '64'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel12, 'WndCaption', cmpEqual, '64');
+  //Clicks the 'lueTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.lueTest.lueTestEdit.Click(258, 13);
+  //Clicks the 'TcxCustomLookupDBGrid' object.
+  Aliases.TestEnvironment_TD32_.TcxComboBoxPopupWindow.TcxCustomLookupDBGrid.Click(105, 37);
+  //Clicks the 'lueTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.lueTest.lueTestEdit.Click(285, 3);
+  //Clicks the 'lueTestEdit' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pMainPanel.lueTest.lueTestEdit.Click(263, 11);
+  //Clicks the 'TcxCustomLookupDBGrid' object.
+  Aliases.TestEnvironment_TD32_.TcxComboBoxPopupWindow.TcxCustomLookupDBGrid.Click(173, 19);
+  //Clicks the 'TcxButton9' button.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pButtonsPanel.TcxButton9.ClickButton;
+  //Checks whether the 'WndCaption' property of the Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel2 object equals '2'.
+  aqObject.CheckProperty(Aliases.TestEnvironment_TD32_.FMain.MDIClient.FEdits.sbMain.pLabelsPanel.TcxLabel2, 'WndCaption', cmpEqual, '2');
+  //Clicks the 'MDIClient' object.
+  Aliases.TestEnvironment_TD32_.FMain.MDIClient.Click(148, 899);
+end;
